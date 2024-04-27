@@ -26,26 +26,26 @@ Feature: Jugar duelos para ganar monedas
         When el tiempo límite para seleccionar respuesta se agota
         Then el duelo finaliza y se determina el resultado automáticamente
 
-    Scenario: Usuario selecciona una respuesta correcta rápidamente
+    Scenario: En el que el usuario selecciona una respuesta correcta rápidamente
         Given el usuario está en la pantalla de duelo
         When el usuario selecciona una respuesta correcta en poco tiempo
         Then el usuario gana el duelo y recibe monedas
 
-    Scenario: Usuario no gana el duelo
+    Scenario: En el que el usuario no gana el duelo
         Given el usuario está en la pantalla de duelo
         When el usuario participa en un duelo pero no gana
         Then el usuario no recibe monedas
 
-    Scenario: Usuario recibe monedas
+    Scenario: En el que el usuario recibe monedas
         Given el usuario ganó un duelo
         Then el usuario recibe monedas como recompensa
 
-    Scenario: Usuario desinstala y vuelve a instalar la app
+    Scenario: En el que el usuario desinstala y vuelve a instalar la app
         Given el usuario ha desinstalado la app
         When el usuario vuelve a instalar la app y la abre
         Then el usuario puede jugar duelos y ganar monedas como antes
 
-    Scenario: Usuario ha jugado más de 30 duelos
+    Scenario: En el que el usuario ha jugado más de 30 duelos
         Given el usuario ha jugado más de 30 duelos
         Then el usuario puede seguir jugando duelos para ganar monedas
 
